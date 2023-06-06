@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
-    <!--link para os botōes-->
+   
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -26,7 +26,7 @@
            flex-direction: column;
            justify-content: center;
         }
-        /*Fundo do player*/
+       
         .wrapper{
            border: 1px solid transparent;
            padding: 30px;
@@ -39,7 +39,7 @@
            flex-direction: column;
            justify-content: center;
         }
-        /* borda do Circulo e foto*/
+        
         .track-art{
             margin: 25px;
             height: 250px;
@@ -55,20 +55,20 @@
             -webkit-border-radius:190px;
             border-radius: 190px;
         }
-        /*palavras em cima do player*/
+        
         .now-playing{
             font-size: 1rem;
         }
-        /*nome da musica*/
+       
        .track-name{
             font-size: 2.5rem;
         }
-        /*nome do artista*/
+    
         .track-artist{
             margin-top: 5px;
             font-size: 1.5rem;
         }
-        /*botoēs*/
+      
         .buttons{
             display: flex;
             flex-direction: row;
@@ -152,7 +152,7 @@
         .rotate{
             animation: rotation 8s infinite linear;
         }
-           /*Rotação imagem*/
+          
             @keyframes rotation{
                 from{
                     transform: rotate(0deg);
@@ -229,7 +229,7 @@
                 <input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
                 <i class="fa fa-volume-up"></i>
            </div>
-           <!--botoēs-->
+           
            <div class="buttons">
                <div class="random-track" onclick="randomTrack()">
                    <i class="fas fa-random fa-2x" title="random"></i>
@@ -247,7 +247,7 @@
                     <i class="fa fa-repeat fa-2x" title="repeat"></i>
                 </div>
            </div>
-           <!--Efeito som animado-->
+           
            <div id="wave">
                 <span class="stroke"></span>
                 <span class="stroke"></span>
@@ -260,7 +260,7 @@
        </div>
    </div>
    <script>
-      //Criando as variáveis e pegando os ids no css com querySelector
+    
       let now_playing = document.querySelector('.now-playing');
 
       let track_art = document.querySelector('.track-art');
@@ -294,7 +294,7 @@
      let isPlaying = false;
      let isRandom = false;
      let updateTimer;
-     /*Criando a constante das musicas e colocando num Array*/
+       
     const music_list = [
       {
         img : 'into.png',
@@ -333,7 +333,7 @@
     
       curr_track.load();
      
-     //pegando as imagens capa
+
       track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
  
       track_name.textContent = music_list[track_index].name;
@@ -342,13 +342,13 @@
      
       now_playing.textContent = "PlayList " + (track_index + 1) + " of " + music_list.length;
     
-      //atualizar tempo
+      
        updateTimer = setInterval(setUpdate, 1000);
 
       curr_track.addEventListener('ended', nextTrack);
       random_bg_color();
     }
-     //função cor aleatória 
+   
      function random_bg_color(){
     
      let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
@@ -371,7 +371,7 @@
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
    }
-   //resetando tempo
+ 
    function reset(){
       curr_time.textContent = "00:00";
       total_duration.textContent = "00:00";
@@ -384,7 +384,7 @@
       isRandom = true;
       randomIcon.classList.add('randomActive');
    }
-   //função Pausa 
+ 
    function pauseRandom(){
       isRandom = false;
       randomIcon.classList.remove('randomActive');
