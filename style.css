@@ -13,7 +13,7 @@
            flex-direction: column;
            justify-content: center;
         }
-        /*Fundo do player*/
+
         .wrapper{
            border: 1px solid transparent;
            padding: 30px;
@@ -26,7 +26,7 @@
            flex-direction: column;
            justify-content: center;
         }
-        /* borda do Circulo e foto*/
+        
         .track-art{
             margin: 25px;
             height: 250px;
@@ -42,20 +42,20 @@
             -webkit-border-radius:190px;
             border-radius: 190px;
         }
-        /*palavras em cima do player*/
+        
         .now-playing{
             font-size: 1rem;
         }
-        /*nome da musica*/
+        
        .track-name{
             font-size: 2.5rem;
         }
-        /*nome do artista*/
+
         .track-artist{
             margin-top: 5px;
             font-size: 1.5rem;
         }
-        /*botoēs*/
+    
         .buttons{
             display: flex;
             flex-direction: row;
@@ -139,7 +139,7 @@
         .rotate{
             animation: rotation 8s infinite linear;
         }
-           /*Rotação imagem*/
+       
             @keyframes rotation{
                 from{
                     transform: rotate(0deg);
