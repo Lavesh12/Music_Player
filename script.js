@@ -1,4 +1,4 @@
-                //Criando as variáveis e pegando os ids no css com querySelector
+
       let now_playing = document.querySelector('.now-playing');
 
       let track_art = document.querySelector('.track-art');
@@ -32,7 +32,7 @@
      let isPlaying = false;
      let isRandom = false;
      let updateTimer;
-     /*Criando a constante das musicas e colocando num Array*/
+    
     const music_list = [
       {
         img : 'images/into.png',
@@ -71,7 +71,7 @@
     
       curr_track.load();
      
-     //pegando as imagens capa
+     
       track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
  
       track_name.textContent = music_list[track_index].name;
@@ -80,13 +80,13 @@
      
       now_playing.textContent = "PlayList " + (track_index + 1) + " of " + music_list.length;
     
-      //atualizar tempo
+      
        updateTimer = setInterval(setUpdate, 1000);
 
       curr_track.addEventListener('ended', nextTrack);
       random_bg_color();
     }
-     //função cor aleatória 
+  
      function random_bg_color(){
     
      let hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e'];
@@ -109,7 +109,7 @@
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
    }
-   //resetando tempo
+  
    function reset(){
       curr_time.textContent = "00:00";
       total_duration.textContent = "00:00";
@@ -122,7 +122,7 @@
       isRandom = true;
       randomIcon.classList.add('randomActive');
    }
-   //função Pausa 
+ 
    function pauseRandom(){
       isRandom = false;
       randomIcon.classList.remove('randomActive');
